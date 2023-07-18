@@ -1,6 +1,19 @@
 {
+  "navbar.title": "MemoryCard",
+  "navbar.levels": "Levels",
   "login.input.placeholder": "Enter your name",
   "login.input.label": "Username",
-  "login.input.error": "The name must be more than 2 characters and not include numbers or symbols",
-  "login.button.label": "Log in"
+  "login.input.error": "The name must be more than 2 characters",
+  "login.button.label": "Log in",
+  "level.high": "High",
+  "level.mid": "Medium",
+  "level.low": "Low",
+  "home.welcome": "Welcome",
+  "home.difficulty": "Your difficulty level is:",
+  "home.ready": "Ready?",
+  "home.start": "Start",
+  "home.memorize": "Memorize the cards",
+  "home.where": "Where is the number",
+  "home.highscore": "Hightscore",
+  "game.score": "Points:"
 }

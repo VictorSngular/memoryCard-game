@@ -1,5 +1,3 @@
-// app/store.ts
-
 import { configureStore } from "@reduxjs/toolkit";
 import userSlice from "./reducers/userSlice";
 
