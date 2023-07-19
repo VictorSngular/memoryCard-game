@@ -1,0 +1,11 @@
+.cardbox-body {
+  height: 100px;
+}
+
+.success-bg {
+  background-color: var(--success-color);
+}
+
+.error-bg {
+  background-color: var(--error-color);
+}

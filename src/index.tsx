@@ -6,6 +6,7 @@ import RouterApp from "./Routes";
 import "./config/i18n.js";
 import { Provider } from "react-redux";
 import { store } from "./store";
+import "./styles/themeColors.css";
 
 const root = ReactDOM.createRoot(
   document.getElementById("root") as HTMLElement

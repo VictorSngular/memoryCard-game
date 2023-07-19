@@ -44,7 +44,7 @@ export const CardsGame = ({ level, onFinish }: Props) => {
       </Typography>
       <Grid
         container
-        spacing={{ xs: 2, md: 4 }}
+        spacing={{ xs: 2, md: 6 }}
         columns={{ xs: 9, sm: 9, md: 12 }}
       >
         {initialNumbers.map((value) => (
@@ -53,7 +53,7 @@ export const CardsGame = ({ level, onFinish }: Props) => {
               isValid={value === rightNumber}
               number={value}
               isVisible={showNumbers}
-              onClick={handleClick}
+              onClick={() => handleClick(value === rightNumber)}
             />
           </Grid>
         ))}
