@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { LevelProps } from "../../global/levels";
-import { Box, Card, Container, Grid, Typography } from "@mui/material";
+import { Container, Grid, Typography } from "@mui/material";
 import { generateUniqueNumbers, getRandomNumber } from "../../utils/cardsGame";
 import { CardBox } from "../../components/CardBox/CardBox";
 import { useTranslation } from "react-i18next";
