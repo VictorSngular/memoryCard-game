@@ -25,8 +25,11 @@ export const CardBox = ({ isVisible, onClick, number, isValid }: Props) => {
     setShowNumber(isVisible);
   }, [number, isVisible]);
   return (
-    <Card onClick={handleClick}>
-      <CardContent className={`cardbox-body ${color}`}>
+    <Card component={"button"} onClick={handleClick}>
+      <CardContent
+        data-testid="cardbox-content__id"
+        className={`cardbox-body ${color}`}
+      >
         <Grid container justifyContent={"center"} alignItems={"center"}>
           <Grid item>
             <Zoom in={showNumber}>
