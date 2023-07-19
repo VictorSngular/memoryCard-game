@@ -19,7 +19,7 @@ export const Home = () => {
     setIsGaming(false);
     setHighScore(newscore);
   };
-  return name && !!selectedLevel ? (
+  return name ? (
     <>
       <NavBar showLevels={!isGaming} onChangeLevel={setSelectedLevel}></NavBar>
       <Container className="home_body" maxWidth="md">
