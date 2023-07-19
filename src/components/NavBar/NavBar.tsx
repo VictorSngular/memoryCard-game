@@ -19,7 +19,7 @@ export const NavBar = ({ onChangeLevel, showLevels }: Props) => {
 
   useEffect(() => {
     if (levelSelected) onChangeLevel(levelSelected);
-  }, [levelSelected]);
+  }, [levelSelected, onChangeLevel]);
 
   return (
     <AppBar position="static">
@@ -27,12 +27,12 @@ export const NavBar = ({ onChangeLevel, showLevels }: Props) => {
         <Typography variant="h6" noWrap>
           {t("navbar.title")}
         </Typography>
-        {showLevels ? (
-          <SelectLevels onChange={setLevelSelected}></SelectLevels>
-        ) : (
-          <></>
-        )}
       </Toolbar>
+      {showLevels ? (
+        <SelectLevels onChange={setLevelSelected}></SelectLevels>
+      ) : (
+        <></>
+      )}
     </AppBar>
   );
 };

@@ -4,6 +4,7 @@
   "login.input.placeholder": "Enter your name",
   "login.input.label": "Username",
   "login.input.error": "The name must be more than 2 characters",
+  "login.input.required": "Username is required",
   "login.button.label": "Log in",
   "level.high": "High",
   "level.mid": "Medium",

@@ -1,6 +1,31 @@
 :root {
+  /* Colores */
   --success-color: #00d781;
   --error-color: #ff1385;
   --secondary-color: #00ab93;
   --primary-color: #009dcf;
+  --background-color: #f5f5f5;
+  --background-white: #fff;
+  --text-color: #333;
+
+  /* Espaciado */
+  --spacing-xs: 4px;
+  --spacing-sm: 8px;
+  --spacing-md: 16px;
+  --spacing-lg: 32px;
+  --spacing-xl: 64px;
+
+  /* Radio de borde */
+  --border-radius-sm: 2px;
+  --border-radius-md: 4px;
+  --border-radius-lg: 8px;
+}
+
+.app_root {
+  color: var(--text-color);
+  background-color: var(--background-color);
+  min-height: 100vh;
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: auto;
 }

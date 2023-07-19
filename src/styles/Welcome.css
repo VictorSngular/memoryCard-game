@@ -1,0 +1,13 @@
+.welcome_wrapper {
+  padding: var(--spacing-lg);
+  background-color: white;
+  border-radius: var(--border-radius-lg);
+}
+
+.welcome_title {
+  margin-bottom: var(--spacing-lg);
+}
+
+.welcome_body {
+  margin-bottom: var(--spacing-md);
+}

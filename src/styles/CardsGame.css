@@ -1,0 +1,9 @@
+.cardsgame_header {
+  padding: var(--spacing-md);
+  background-color: var(--background-white);
+  border-radius: var(--border-radius-lg);
+}
+
+.cardsgame_numbers {
+  margin-top: var(--spacing-lg);
+}

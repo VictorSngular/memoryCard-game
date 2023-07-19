@@ -3,6 +3,7 @@ import { LoginForm } from "../../modules/LoginForm/LoginForm";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../reducers/userSlice";
 import { useNavigate } from "react-router-dom";
+import "../../styles/Login.css";
 
 export const Login = () => {
   const dispatch = useDispatch();
@@ -13,14 +14,14 @@ export const Login = () => {
     navigate("/game");
   };
   return (
-    <Container>
+    <Container className="login">
       <Grid
         container
         direction="row"
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item>
+        <Grid item justifyContent={"center"} alignItems={"center"} xs={8}>
           <LoginForm onSelectUser={onSelectUser} />
         </Grid>
       </Grid>

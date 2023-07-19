@@ -1,4 +1,4 @@
-import { Container, Typography } from "@mui/material";
+import { Container } from "@mui/material";
 import React, { useState } from "react";
 import { RootState } from "../../store";
 import { Welcome } from "../../modules/Welcome/Welcome";
@@ -6,6 +6,7 @@ import { CardsGame } from "../../modules/CardsGame/CardsGame";
 import { useSelector } from "react-redux";
 import NavBar from "../../components/NavBar/NavBar";
 import { LevelProps } from "../../global/levels";
+import "../../styles/Home.css";
 
 export const Home = () => {
   const { name } = useSelector((state: RootState) => state.user);
@@ -21,10 +22,10 @@ export const Home = () => {
   return name && !!selectedLevel ? (
     <>
       <NavBar showLevels={!isGaming} onChangeLevel={setSelectedLevel}></NavBar>
-      <Container>
-        <Typography>HighScore: {highScore}</Typography>
+      <Container className="home_body" maxWidth="md">
         {!isGaming ? (
           <Welcome
+            highscore={highScore}
             onPlay={() => setIsGaming(true)}
             username={name}
             level={selectedLevel.name}

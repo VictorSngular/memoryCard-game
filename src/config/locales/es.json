@@ -4,6 +4,7 @@
   "login.input.placeholder": "Introduce tu nombre",
   "login.input.label": "Nombre de usuario",
   "login.input.error": "El nombre debe tener más de 2 caracteres",
+  "login.input.required": "El usuario es requerido",
   "login.button.label": "Iniciar sesión",
   "level.high": "Alto",
   "level.mid": "Medio",

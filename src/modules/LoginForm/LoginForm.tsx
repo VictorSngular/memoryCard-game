@@ -1,53 +1,84 @@
+import React, { useState } from "react";
 import {
   Button,
   Card,
-  CardActions,
   CardContent,
+  CardActions,
   FormControl,
   TextField,
+  Typography,
+  FormHelperText,
+  Grid,
 } from "@mui/material";
-import { useState } from "react";
-import { checkInputText } from "../../utils/formValidation";
 import { useTranslation } from "react-i18next";
+import { checkInputText } from "../../utils/formValidation";
+import "../../styles/LoginForm.css";
 
 interface Props {
   onSelectUser: (username: string) => void;
 }
 
-export const LoginForm = ({ onSelectUser }: Props) => {
+export const LoginForm: React.FC<Props> = ({ onSelectUser }) => {
   const [username, setUsername] = useState("");
-  const [hasError, setHasError] = useState<boolean>(false);
+  const [hasError, setHasError] = useState(false);
   const { t } = useTranslation();
 
-  const onValidateInput = () => {
+  const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    setUsername(event.target.value);
+  };
+
+  const handleButtonClick = () => {
     const isValid = checkInputText(username);
     setHasError(!isValid);
-    if (isValid) onSelectUser(username);
+    if (isValid) {
+      onSelectUser(username);
+    }
   };
 
   return (
-    <Card>
-      <CardContent>
-        <FormControl>
-          <TextField
-            error={hasError}
-            helperText={hasError ? t("login.input.error") : ""}
-            id="username"
-            placeholder={t("login.input.placeholder")}
-            label={t("login.input.label")}
-            variant="standard"
-            inputMode="text"
-            color="primary"
-            onChange={(event) => setUsername(event.target.value)}
-            required
-          />
-        </FormControl>
-      </CardContent>
-      <CardActions>
-        <Button onClick={onValidateInput} variant="contained" color="primary">
-          {t("login.button.label")}
-        </Button>
-      </CardActions>
-    </Card>
+    <div className="logicform_wrapper">
+      <Card sx={{ minWidth: 275 }}>
+        <CardContent>
+          <Grid container justifyContent={"center"}>
+            <Grid item>
+              <Typography
+                className="loginform_title"
+                variant="h4"
+                component="div"
+                gutterBottom
+              >
+                {t("navbar.title")}
+              </Typography>
+            </Grid>
+          </Grid>
+          <FormControl className="loginform_form" error={hasError} fullWidth>
+            <TextField
+              label={t("login.input.label")}
+              placeholder={t("login.input.placeholder")}
+              value={username}
+              onChange={handleInputChange}
+              helperText={hasError ? t("login.input.error") : ""}
+              variant="outlined"
+              sx={{ marginBottom: 2 }}
+            />
+            {hasError && (
+              <FormHelperText>{t("login.input.required")}</FormHelperText>
+            )}
+          </FormControl>
+        </CardContent>
+        <CardActions>
+          <Button
+            variant="contained"
+            color="secondary"
+            onClick={handleButtonClick}
+            fullWidth
+          >
+            {t("login.button.label")}
+          </Button>
+        </CardActions>
+      </Card>
+    </div>
   );
 };
+
+export default LoginForm;

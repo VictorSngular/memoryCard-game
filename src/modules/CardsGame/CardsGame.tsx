@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from "react";
 import { LevelProps } from "../../global/levels";
-import { Box, Card, Grid, Typography } from "@mui/material";
+import { Box, Card, Container, Grid, Typography } from "@mui/material";
 import { generateUniqueNumbers, getRandomNumber } from "../../utils/cardsGame";
 import { CardBox } from "../../components/CardBox/CardBox";
 import { useTranslation } from "react-i18next";
+import "../../styles/CardsGame.css";
 
 interface Props {
   level: LevelProps;
@@ -35,29 +36,43 @@ export const CardsGame = ({ level, onFinish }: Props) => {
   };
 
   return (
-    <Box>
-      <Typography variant="h6">
-        {showNumbers ? t("home.memorize") : `${t("home.where")} ${rightNumber}`}
-      </Typography>
-      <Typography>
-        {t("game.score")} {userScore}
-      </Typography>
+    <Container className="cardsgame_wrapper">
       <Grid
+        className="cardsgame_header"
         container
-        spacing={{ xs: 2, md: 6 }}
-        columns={{ xs: 9, sm: 9, md: 12 }}
+        justifyContent={"space-between"}
       >
-        {initialNumbers.map((value) => (
-          <Grid key={value} item xs={3} md={4}>
-            <CardBox
-              isValid={value === rightNumber}
-              number={value}
-              isVisible={showNumbers}
-              onClick={() => handleClick(value === rightNumber)}
-            />
-          </Grid>
-        ))}
+        <Grid item>
+          <Typography variant="h6">
+            {showNumbers
+              ? t("home.memorize")
+              : `${t("home.where")} ${rightNumber}`}
+          </Typography>
+        </Grid>
+        <Grid item>
+          <Typography variant={"h6"}>
+            {t("game.score")} {userScore}
+          </Typography>
+        </Grid>
       </Grid>
-    </Box>
+      <Container className="cardsgame_numbers" maxWidth="xs">
+        <Grid
+          container
+          spacing={{ xs: 2, md: 6 }}
+          columns={{ xs: 9, sm: 9, md: 12 }}
+        >
+          {initialNumbers.map((value) => (
+            <Grid key={value} item xs={3} md={4}>
+              <CardBox
+                isValid={value === rightNumber}
+                number={value}
+                isVisible={showNumbers}
+                onClick={() => handleClick(value === rightNumber)}
+              />
+            </Grid>
+          ))}
+        </Grid>
+      </Container>
+    </Container>
   );
 };

@@ -1,0 +1,8 @@
+.logicform_wrapper {
+  min-height: 360px;
+  width: 100%;
+}
+
+.loginform_title {
+  margin-bottom: var(--spacing-lg);
+}
