@@ -1,6 +1,6 @@
 import { Card, CardContent, Grid, Typography } from "@mui/material";
 import Zoom from "@mui/material/Zoom";
-import "../../styles/CardBox.css";
+import "./CardBox.css";
 import React, { useEffect, useState } from "react";
 
 interface Props {

@@ -3,7 +3,7 @@ import { LoginForm } from "../../modules/LoginForm/LoginForm";
 import { useDispatch } from "react-redux";
 import { setUser } from "../../reducers/userSlice";
 import { useNavigate } from "react-router-dom";
-import "../../styles/Login.css";
+import "./Login.css";
 
 export const Login = () => {
   const dispatch = useDispatch();

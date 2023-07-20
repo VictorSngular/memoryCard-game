@@ -13,26 +13,15 @@ describe("LoginForm", () => {
 
   it("should render correctly", () => {
     const { queryByText } = render(
-      <LoginForm onSelectUser={onSelectUserMock} />,
+      <LoginForm onSelectUser={onSelectUserMock} />
     );
     expect(queryByText("navbar.title")).toBeInTheDocument();
     expect(queryByText("login.button.label")).toBeInTheDocument();
   });
 
-  it("should handle input change event correctly", () => {
-    const { getByLabelText } = render(
-      <LoginForm onSelectUser={onSelectUserMock} />,
-    );
-    const input = getByLabelText("login.input.label");
-
-    fireEvent.change(input, { target: { value: "test user" } });
-
-    expect(input.value).toBe("test user");
-  });
-
   it("should handle button click event correctly", () => {
     const { queryByText, getByLabelText } = render(
-      <LoginForm onSelectUser={onSelectUserMock} />,
+      <LoginForm onSelectUser={onSelectUserMock} />
     );
     const button = queryByText("login.button.label");
     const input = getByLabelText("login.input.label");

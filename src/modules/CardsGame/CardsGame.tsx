@@ -4,7 +4,7 @@ import { Container, Grid, Typography } from "@mui/material";
 import { generateUniqueNumbers, getRandomNumber } from "../../utils/cardsGame";
 import { CardBox } from "../../components/CardBox/CardBox";
 import { useTranslation } from "react-i18next";
-import "../../styles/CardsGame.css";
+import "./CardsGame.css";
 
 interface Props {
   level: LevelProps;

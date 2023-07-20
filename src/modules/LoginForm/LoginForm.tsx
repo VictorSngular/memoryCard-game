@@ -12,7 +12,7 @@ import {
 } from "@mui/material";
 import { useTranslation } from "react-i18next";
 import { checkInputText } from "../../utils/formValidation";
-import "../../styles/LoginForm.css";
+import "./LoginForm.css";
 
 interface Props {
   onSelectUser: (username: string) => void;
