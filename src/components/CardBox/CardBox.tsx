@@ -14,6 +14,7 @@ export const CardBox = ({ isVisible, onClick, number, isValid }: Props) => {
   const [showNumber, setShowNumber] = useState<boolean>(isVisible);
   const handleClick = () => {
     if (!isVisible) {
+      if (navigator.vibrate) navigator.vibrate(200);
       setShowNumber(true);
       setColor(isValid ? "success-bg" : "error-bg");
       setTimeout(onClick, 2000);

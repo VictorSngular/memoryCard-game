@@ -16,5 +16,6 @@
   "home.memorize": "Memorize the cards",
   "home.where": "Where is the number",
   "home.highscore": "Hightscore",
-  "game.score": "Points:"
+  "game.score": "Points:",
+  "game.time": "Time"
 }

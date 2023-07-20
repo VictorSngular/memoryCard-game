@@ -15,17 +15,38 @@ export const CardsGame = ({ level, onFinish }: Props) => {
   const [showNumbers, setShowNumbers] = useState<boolean>(true);
   const [userScore, setUserScore] = useState<number>(0);
   const [rightNumber, setRightNumber] = useState<number>(0);
+  const [countdown, setCountdown] = useState<number>(level.time);
   const { t } = useTranslation();
 
   useEffect(() => {
     onReset();
   }, []);
 
+  useEffect(() => {
+    let intervalId: NodeJS.Timeout | null = null;
+    if (showNumbers) {
+      intervalId = setInterval(() => {
+        setCountdown((prevCountdown) => prevCountdown - 1);
+      }, 1000);
+    }
+    return () => {
+      if (intervalId) {
+        clearInterval(intervalId);
+      }
+    };
+  }, [showNumbers]);
+
+  useEffect(() => {
+    if (countdown === 0) {
+      setShowNumbers(false);
+    }
+  }, [countdown]);
+
   const onReset = () => {
     setShowNumbers(true);
     setRightNumber(getRandomNumber());
     setInitialNumbers(generateUniqueNumbers());
-    setTimeout(() => setShowNumbers(false), level.time * 1000);
+    setCountdown(level.time);
   };
 
   const handleClick = (isRight: boolean) => {
@@ -51,7 +72,8 @@ export const CardsGame = ({ level, onFinish }: Props) => {
         </Grid>
         <Grid item>
           <Typography variant={"h6"}>
-            {t("game.score")} {userScore}
+            {t("game.score")} {userScore}{" "}
+            {showNumbers && `${t("game.time")}: ${countdown}s`}
           </Typography>
         </Grid>
       </Grid>

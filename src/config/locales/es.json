@@ -16,5 +16,6 @@
   "home.memorize": "Memoriza las cartas",
   "home.where": "Donde está el número",
   "home.highscore": "Máxima puntuación",
-  "game.score": "Puntos:"
+  "game.score": "Puntos:",
+  "game.time": "Tiempo"
 }

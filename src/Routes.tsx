@@ -11,8 +11,8 @@ export default function RouterApp() {
   return (
     <Box className={"app_root"}>
       <Routes>
-        <Route element={<Navigate to="/" replace />} path="*" />
-        <Route element={<Login />} path="/" />
+        <Route element={<Navigate to="/home" replace />} path="*" />
+        <Route element={<Login />} path="/home" />
         <Route
           element={<ProtectedRoute user={username} children={<Home />} />}
           path="/game"
