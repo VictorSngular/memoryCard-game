@@ -13,7 +13,7 @@ describe("LoginForm", () => {
 
   it("should render correctly", () => {
     const { queryByText } = render(
-      <LoginForm onSelectUser={onSelectUserMock} />
+      <LoginForm onSelectUser={onSelectUserMock} />,
     );
     expect(queryByText("navbar.title")).toBeInTheDocument();
     expect(queryByText("login.button.label")).toBeInTheDocument();
@@ -21,7 +21,7 @@ describe("LoginForm", () => {
 
   it("should handle button click event correctly", () => {
     const { queryByText, getByLabelText } = render(
-      <LoginForm onSelectUser={onSelectUserMock} />
+      <LoginForm onSelectUser={onSelectUserMock} />,
     );
     const button = queryByText("login.button.label");
     const input = getByLabelText("login.input.label");

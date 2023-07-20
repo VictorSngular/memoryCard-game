@@ -11,7 +11,7 @@ import reportWebVitals from "./reportWebVitals";
 import "./styles/themeColors.css";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
@@ -21,7 +21,7 @@ root.render(
         <RouterApp />
       </Router>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
 
 // If you want your app to work offline and load faster, you can change
