@@ -21,7 +21,13 @@ export const Login = () => {
         justifyContent="center"
         alignItems="center"
       >
-        <Grid item justifyContent={"center"} alignItems={"center"} xs={8}>
+        <Grid
+          item
+          justifyContent={"center"}
+          alignItems={"center"}
+          xs={12}
+          md={8}
+        >
           <LoginForm onSelectUser={onSelectUser} />
         </Grid>
       </Grid>
