@@ -13,7 +13,7 @@ export const Home = () => {
   const [highScore, setHighScore] = useState<number>(0);
   const [isGaming, setIsGaming] = useState<boolean>(false);
   const [selectedLevel, setSelectedLevel] = useState<LevelProps>(
-    {} as LevelProps
+    {} as LevelProps,
   );
   const onFinishGame = (newscore: number) => {
     setIsGaming(false);

@@ -12,7 +12,7 @@ interface Props {
 
 export const NavBar = ({ onChangeLevel, showLevels }: Props) => {
   const [levelSelected, setLevelSelected] = useState<LevelProps | null>(
-    LEVELS_OPTIONS[0]
+    LEVELS_OPTIONS[0],
   );
 
   const { t } = useTranslation();

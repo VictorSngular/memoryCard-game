@@ -29,7 +29,7 @@ describe("CardBox", () => {
 
   it("should display the correct color when isValid is false", () => {
     const { getByRole, getByTestId } = render(
-      <CardBox {...props} isValid={false} isVisible={false} />
+      <CardBox {...props} isValid={false} isVisible={false} />,
     );
     const card = getByRole("button");
 
@@ -41,7 +41,7 @@ describe("CardBox", () => {
 
   it("should display the correct color when isValid is true", () => {
     const { getByRole, getByTestId } = render(
-      <CardBox {...props} isValid={true} isVisible={false} />
+      <CardBox {...props} isValid={true} isVisible={false} />,
     );
     const card = getByRole("button");
 

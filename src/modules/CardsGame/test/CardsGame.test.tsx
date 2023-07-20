@@ -29,7 +29,7 @@ describe("CardsGame", () => {
 
   it("should render correctly", () => {
     const { queryByText } = render(
-      <CardsGame level={levelMock} onFinish={onFinishMock} />
+      <CardsGame level={levelMock} onFinish={onFinishMock} />,
     );
     expect(queryByText("home.memorize")).toBeInTheDocument();
 
@@ -39,7 +39,7 @@ describe("CardsGame", () => {
 
   it("should handle click event correctly", async () => {
     const { getAllByRole } = render(
-      <CardsGame level={levelMock} onFinish={onFinishMock} />
+      <CardsGame level={levelMock} onFinish={onFinishMock} />,
     );
     const buttons = getAllByRole("button");
 

@@ -20,7 +20,7 @@ export const SelectLevels = ({ onChange }: Props) => {
 
   useEffect(() => {
     const levelOption = LEVELS_OPTIONS.find(
-      (level) => level.name === levelSelected
+      (level) => level.name === levelSelected,
     );
     if (levelOption) onChange(levelOption);
   }, [levelSelected]);

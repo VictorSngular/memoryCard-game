@@ -9,7 +9,7 @@ import { store } from "./store";
 import "./styles/themeColors.css";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 root.render(
   <React.StrictMode>
@@ -19,5 +19,5 @@ root.render(
         <RouterApp />
       </Router>
     </Provider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
