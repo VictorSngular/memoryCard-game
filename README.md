@@ -1,46 +1,75 @@
-# Getting Started with Create React App
+    # Memory Cards
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+    Memory Cards is a Progressive Web App (PWA) game that you can install on your mobile devices. This project uses the Atomic Design pattern and was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+    ## Installation and Local Execution
 
-In the project directory, you can run:
+    To install and run the Memory Cards application locally, follow these steps:
 
-### `npm start`
+    1. Clone the repository to your local machine using `git clone`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+    ```bash
+    git clone <repository-url>
+    ```
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+    2. Navigate into the project directory.
 
-### `npm test`
+    ```bash
+    cd memory-cards
+    ```
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    3. Install the project dependencies.
 
-### `npm run build`
+    ```bash
+    npm install
+    ```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+    4. Start the application.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+    ```bash
+    npm start
+    ```
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+    The application will start in development mode and will be available at [http://localhost:3000](http://localhost:3000) in your browser.
 
-### `npm run eject`
+    ## Running Tests
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+    To run the tests for the Memory Cards application, use the following command:
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+    ```bash
+    npm test
+    ```
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+    This will launch the test runner in the interactive watch mode.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+    ## Husky Pre-commit Hooks
 
-## Learn More
+    This project uses Husky to manage git hooks. We have a pre-commit hook set up to run ESLint and tests before each commit to ensure code quality and that all tests are passing.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+    ## Prettier Code Formatting
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+    Prettier is set up in this project to manage code formatting. You can run Prettier across the codebase using the following command:
+
+    ```bash
+    npm run format
+    ```
+
+    Or if you're using Yarn:
+
+    ```bash
+    yarn format
+    ```
+
+    ## Progressive Web App (PWA)
+
+    Memory Cards is a PWA, which means it can be installed on your mobile device and accessed offline. This is made possible by a Service Worker that caches the application's resources.
+
+    ## Atomic Design
+
+    This project uses the Atomic Design pattern. This means that the components are split up into atoms, molecules, organisms, templates, and pages. This allows for better reusability and scalability of components.
+
+    ## Learn More
+
+    You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+
+    To learn React, check out the [React documentation](https://reactjs.org/).
